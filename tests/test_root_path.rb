@@ -15,7 +15,7 @@ class RootPathTest < Test::Unit::TestCase
     assert last_response.ok?
   end
 
-  def test_it_receives_json
+  def test_it_returns_json
     get '/'
 
     assert_equal(
