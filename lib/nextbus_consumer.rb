@@ -24,6 +24,56 @@ class NextBusConsumer
     parse_route_data(response.body)
   end
 
+  def predict_stop_departure_time_by_id(stop_id)
+    response = RestClient.get(
+      BASE_URL,
+      params: {command: 'predictions', a: AGENCY, stopId: stop_id}
+    )
+
+    parse_prediction_data(response.body)
+  end
+
+  def parse_prediction_data(response_body)
+    doc = Nokogiri::XML(response_body)
+    json_result = []
+
+    doc.css('prediction').each do |prediction|
+      json_result << {
+        'route' => {
+          'tag' => prediction['routeTag'],
+          'title' => prediction['routeTitle']
+        }
+      }
+
+      last_prediction = json_result.last
+      last_prediction['hasPrediction'] = prediction['dirTitleBecauseNoPredictions'] ? false : true
+
+      if last_prediction['hasPrediction']
+        last_prediction['directions'] = []
+
+        prediction.css('direction').each do |direction|
+          last_prediction['directions'] << {
+            'title' => direction['title']
+          }
+
+          last_direction = last_prediction['directions'].last
+          last_direction['predictions'] = []
+
+          direction.css('prediction').each do |direction_prediction|
+            last_direction['predictions'] << {
+              'epochTime' => direction_prediction['epochTime'],
+              'minutes' => direction_prediction['minutes'],
+              'seconds' => direction_prediction['seconds'],
+              'vehicle' => direction_prediction['vehicle']
+            }
+          end
+        end
+      end
+    end
+
+    JSON.generate(json_result)
+  end
+
   def parse_route_data(response_body)
     doc = Nokogiri::XML(response_body)
 
