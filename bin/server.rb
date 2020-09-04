@@ -1,5 +1,6 @@
 require 'sinatra'
+require 'sinatra/json'
 
 get '/' do
-  'Awesome!'
+  json result: 'Is working.'
 end
