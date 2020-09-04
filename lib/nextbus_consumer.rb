@@ -8,7 +8,7 @@ class NextBusConsumer
   def routes_list
     response = RestClient.get(
       BASE_URL,
-      params: {command: 'reouteList', a: AGENCY}
+      params: {command: 'routeList', a: AGENCY}
     )
 
     parse_agencies_response(response.body)
