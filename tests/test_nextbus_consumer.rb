@@ -62,7 +62,7 @@ class NextBusConsumerTest < Test::Unit::TestCase
     parsed_json_result = JSON.parse(result)
 
     expected_parsed_json_result = JSON.parse(
-      File.open('./tests/data/route_data.json').read
+      File.open('./tests/test_data/route_data.json').read
     )
 
     assert_equal expected_parsed_json_result, parsed_json_result
