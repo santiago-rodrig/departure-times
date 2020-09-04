@@ -60,6 +60,7 @@ class NextBusConsumerTest < Test::Unit::TestCase
 
     result = @consumer.parse_route_data(response_body)
     parsed_json_result = JSON.parse(result)
+
     expected_parsed_json_result = JSON.parse(
       File.open('./tests/data/route_data.json').read
     )
