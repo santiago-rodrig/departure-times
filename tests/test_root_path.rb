@@ -14,4 +14,13 @@ class RootPathTest < Test::Unit::TestCase
 
     assert last_response.ok?
   end
+
+  def test_it_receives_json
+    get '/'
+
+    assert_equal(
+      {"result" => "Is working."},
+      JSON.parse(last_response.body)
+    )
+  end
 end
