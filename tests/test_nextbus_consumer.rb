@@ -36,4 +36,14 @@ class NextBusConsumerTest < Test::Unit::TestCase
       result
     )
   end
+
+  def test_it_parses_stop_tag_prediction
+    response_body = File.open('./tests/test_data/input/prediction_tag_test_data.xml')
+    result = @consumer.parse_predictions_data_by_tag(response_body)
+
+    assert_equal(
+      JSON.parse(File.open('./tests/test_data/output/prediction_tag_test_data.json').read),
+      result
+    )
+  end
 end

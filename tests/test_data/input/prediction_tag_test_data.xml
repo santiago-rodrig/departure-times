@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<body copyright="All data copyright San Francisco Muni 2020.">
+  <predictions agencyTitle="San Francisco Muni" routeTitle="MBUS-M Ocean View Bus" routeTag="MBUS" stopTitle="San Jose Ave &amp; Lakeview Ave" stopTag="6265">
+    <direction title="Inbound to West Portal Station">
+      <prediction epochTime="1599331181276" seconds="29" minutes="0" isDeparture="false" dirTag="MBUS_I_C00" vehicle="8655" block="860000" tripTag="MBUS_I_C00satInbound" />
+      <prediction epochTime="1599331187765" seconds="36" minutes="0" isDeparture="false" dirTag="MBUS_I_C00" vehicle="8622" block="860000" tripTag="MBUS_I_C00satInbound" />
+      <prediction epochTime="1599331201623" seconds="50" minutes="0" isDeparture="false" dirTag="MBUS_I_C00" vehicle="8638" block="860000" tripTag="MBUS_I_C00satInbound" />
+      <prediction epochTime="1599331431315" seconds="279" minutes="4" isDeparture="false" dirTag="MBUS_I_C00" vehicle="8704" block="860000" tripTag="MBUS_I_C00satInbound" />
+      <prediction epochTime="1599332383206" seconds="1231" minutes="20" isDeparture="false" dirTag="MBUS_I_C00" vehicle="8725" block="860000" tripTag="MBUS_I_C00satInbound" />
+    </direction>
+    <message text="For Downtown Svc, Transfer to L or K Bus at West Portal." priority="Normal"/>
+    <message text="Muni for essential trips only. Masks or face coverings are required. Practice physical distancing. Visit sfmta.com/COVID19 for more info." priority="Low"/>
+    <message text="Text COVID19SF to 888-777 for official updates. Visit sfdph.org" priority="Low"/>
+  </predictions>
+</body>
