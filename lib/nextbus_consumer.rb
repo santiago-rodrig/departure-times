@@ -12,7 +12,7 @@ class NextBusConsumer
       params: {command: 'routeList', a: AGENCY}
     )
 
-    parse_agencies_response(response.body)
+    parse_routes_response(response.body)
   end
 
   def route_config(route_tag)
