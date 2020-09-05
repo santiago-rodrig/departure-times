@@ -37,34 +37,38 @@ class NextBusConsumer
     doc = Nokogiri::XML(response_body)
     json_result = []
 
-    doc.css('prediction').each do |prediction|
+    doc.css('predictions').each do |predictions|
       json_result << {
         'route' => {
-          'tag' => prediction['routeTag'],
-          'title' => prediction['routeTitle']
+          'stop' => {
+            'title' => predictions['stopTitle'],
+            'tag' => predictions['stopTag']
+          },
+          'tag' => predictions['routeTag'],
+          'title' => predictions['routeTitle']
         }
       }
 
-      last_prediction = json_result.last
-      last_prediction['hasPrediction'] = prediction['dirTitleBecauseNoPredictions'] ? false : true
+      last_predictions = json_result.last
+      last_predictions['hasPrediction'] = predictions['dirTitleBecauseNoPredictions'] ? false : true
 
-      if last_prediction['hasPrediction']
-        last_prediction['directions'] = []
+      if last_predictions['hasPrediction']
+        last_predictions['directions'] = []
 
-        prediction.css('direction').each do |direction|
-          last_prediction['directions'] << {
+        predictions.css('direction').each do |direction|
+          last_predictions['directions'] << {
             'title' => direction['title']
           }
 
-          last_direction = last_prediction['directions'].last
+          last_direction = last_predictions['directions'].last
           last_direction['predictions'] = []
 
-          direction.css('prediction').each do |direction_prediction|
+          direction.css('prediction').each do |prediction|
             last_direction['predictions'] << {
-              'epochTime' => direction_prediction['epochTime'],
-              'minutes' => direction_prediction['minutes'],
-              'seconds' => direction_prediction['seconds'],
-              'vehicle' => direction_prediction['vehicle']
+              'epochTime' => prediction['epochTime'],
+              'seconds' => prediction['seconds'],
+              'minutes' => prediction['minutes'],
+              'vehicle' => prediction['vehicle']
             }
           end
         end
