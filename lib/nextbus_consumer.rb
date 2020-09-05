@@ -142,4 +142,49 @@ class NextBusConsumer
 
     json_result
   end
+
+  def parse_predictions_data_by_tag(response_body)
+    doc = Nokogiri::XML(response_body)
+
+    json_result = {
+      'route' => {
+        'tag' => '',
+        'title' => '',
+        'stop' => {
+          'tag' => '',
+          'title' => ''
+        }
+      }
+    }
+
+    doc.css('predictions').each do |predictions|
+      json_result['route']['tag'] = predictions['routeTag']
+      json_result['route']['title'] = predictions['routeTitle']
+      json_result['route']['stop']['tag'] = predictions['stopTag']
+      json_result['route']['stop']['title'] = predictions['stopTitle']
+      has_prediction = predictions['dirTitleBecauseNoPredictions'] ? false : true
+      json_result['hasPrediction'] = has_prediction
+
+      if has_prediction
+        json_result['directions'] = []
+
+        predictions.css('direction').each do |direction|
+          json_result['directions'] << {'title' => direction['title']}
+          last_direction = json_result['directions'].last
+          last_direction['predictions'] = []
+
+          direction.css('prediction').each do |prediction|
+            last_direction['predictions'] << {
+              'epochTime' => prediction['epochTime'],
+              'seconds' => prediction['seconds'],
+              'minutes' => prediction['minutes'],
+              'vehicle' => prediction['vehicle']
+            }
+          end
+        end
+      end
+    end
+
+    json_result
+  end
 end
