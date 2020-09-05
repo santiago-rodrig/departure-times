@@ -49,3 +49,12 @@ bundle install
 And you're set, to run the tests use `rake test`, to start the local web server
 use `rake server`.
 
+## Collaboration
+
+To collaborate to this project first fork the repository, after that, create a new branch based
+on
+[develop](https://github.com/santiago-rodrig/departure-times/tree/develop)
+(using [Git-flow](https://nvie.com/posts/a-successful-git-branching-model/)
+is recommended), push your branch to your forked repository and create a PR (Pull Request)
+from your branch to the develop branch of the original repository.
+
