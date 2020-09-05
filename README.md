@@ -58,3 +58,7 @@ on
 is recommended), push your branch to your forked repository and create a PR (Pull Request)
 from your branch to the develop branch of the original repository.
 
+## License
+
+Specify the license. You can [read the license here](./LICENSE.md).
+
