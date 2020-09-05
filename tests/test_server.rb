@@ -28,4 +28,10 @@ class RootPathTest < Test::Unit::TestCase
 
     assert last_response.ok?
   end
+
+  def test_it_gets_stop_prediction_by_tag
+    get PATH_PREFIX + 'prediction_by_tag', params: {stop_tag: '5696', route_tag: 'MBUS'}
+
+    assert last_response.ok?
+  end
 end
