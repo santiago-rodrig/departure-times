@@ -1,0 +1,49 @@
+[
+  {
+    "route": {
+      "title": "714-Bart Early Bird",
+      "tag": "714",
+      "stop": {
+        "title": "San Jose Ave & Geneva Ave",
+        "tag": "6263"
+      }
+    },
+    "hasPrediction": false
+  },
+  {
+    "route": {
+      "title": "MBUS-M Ocean View Bus",
+      "tag": "MBUS",
+      "stop": {
+        "title": "San Jose Ave & Geneva Ave",
+        "tag": "6263"
+      }
+    },
+    "hasPrediction": true,
+    "directions": [
+      {
+        "title": "Inbound to West Portal Station",
+        "predictions": [
+          {
+            "epochTime": "1599258891437",
+            "seconds": "50",
+            "minutes": "0",
+            "vehicle": "8824"
+          },
+          {
+            "epochTime": "1599259548405",
+            "seconds": "707",
+            "minutes": "11",
+            "vehicle": "8805"
+          },
+          {
+            "epochTime": "1599260093381",
+            "seconds": "1252",
+            "minutes": "20",
+            "vehicle": "8704"
+          }
+        ]
+      }
+    ]
+  }
+]

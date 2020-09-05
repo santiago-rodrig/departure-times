@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<body copyright="All data copyright San Francisco Muni 2020.">
+  <predictions agencyTitle="San Francisco Muni" routeTitle="MBUS-M Ocean View Bus" routeTag="MBUS" stopTitle="Steuart St &amp; Market St" stopTag="6501" dirTitleBecauseNoPredictions="Outbound to Balboa Park">
+    <message text="For Downtown Svc, Transfer to L or K Bus at West Portal." priority="Normal"/>
+    <message text="Muni for essential trips only. Masks or face coverings are required. Practice physical distancing. Visit sfmta.com/COVID19 for more info." priority="Low"/>
+    <message text="Text COVID19SF to 888-777 for official updates. Visit sfdph.org" priority="Low"/>
+  </predictions>
+</body>
