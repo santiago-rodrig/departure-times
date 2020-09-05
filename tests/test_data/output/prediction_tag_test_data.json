@@ -1,0 +1,48 @@
+{
+  "route": {
+    "tag": "MBUS",
+    "title": "MBUS-M Ocean View Bus",
+    "stop": {
+      "tag": "6265",
+      "title": "San Jose Ave & Lakeview Ave"
+    }
+  },
+  "hasPrediction": true,
+  "directions": [
+    {
+      "title": "Inbound to West Portal Station",
+      "predictions": [
+        {
+          "epochTime": "1599331181276",
+          "seconds": "29",
+          "minutes": "0",
+          "vehicle": "8655"
+        },
+        {
+          "epochTime": "1599331187765",
+          "seconds": "36",
+          "minutes": "0",
+          "vehicle": "8622"
+        },
+        {
+          "epochTime": "1599331201623",
+          "seconds": "50",
+          "minutes": "0",
+          "vehicle": "8638"
+        },
+        {
+          "epochTime": "1599331431315",
+          "seconds": "279",
+          "minutes": "4",
+          "vehicle": "8704"
+        },
+        {
+          "epochTime": "1599332383206",
+          "seconds": "1231",
+          "minutes": "20",
+          "vehicle": "8725"
+        }
+      ]
+    }
+  ]
+}

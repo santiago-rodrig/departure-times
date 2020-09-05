@@ -1,0 +1,94 @@
+{
+  "directions": [
+    {
+      "name": "Inbound",
+      "stops": [
+        {
+          "tag": "6263"
+        },
+        {
+          "tag": "7111"
+        }
+      ],
+      "tag": "MBUS_I_N00",
+      "title": "Inbound to Embarcadero"
+    },
+    {
+      "name": "Outbound",
+      "stops": [
+        {
+          "tag": "6501"
+        },
+        {
+          "tag": "5669"
+        },
+        {
+          "tag": "5639"
+        }
+      ],
+      "tag": "MBUS_O_N00",
+      "title": "Outbound to Balboa Park"
+    }
+  ],
+  "paths": [
+    {
+      "points": [
+        {
+          "lat": "37.74088",
+          "lon": "-122.46572"
+        },
+        {
+          "lat": "37.7409",
+          "lon": "-122.46584"
+        },
+        {
+          "lat": "37.73806",
+          "lon": "-122.46898"
+        }
+      ]
+    },
+    {
+      "points": [
+        {
+          "lat": "37.7752",
+          "lon": "-122.41925"
+        },
+        {
+          "lat": "37.76771",
+          "lon": "-122.42878"
+        },
+        {
+          "lat": "37.7642",
+          "lon": "-122.43309"
+        },
+        {
+          "lat": "37.76302",
+          "lon": "-122.43498"
+        }
+      ]
+    }
+  ],
+  "stops": [
+    {
+      "lat": "37.7944099",
+      "lon": "-122.39454",
+      "stopId": "16501",
+      "tag": "6501",
+      "title": "Steuart St & Market St"
+    },
+    {
+      "lat": "37.7934699",
+      "lon": "-122.39618",
+      "stopId": "15669",
+      "tag": "5669",
+      "title": "Market St & Drumm St"
+    },
+    {
+      "lat": "37.7893499",
+      "lon": "-122.40131",
+      "stopId": "15639",
+      "tag": "5639",
+      "title": "Market St & 2nd St"
+    }
+  ]
+}

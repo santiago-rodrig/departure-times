@@ -1,0 +1,11 @@
+{
+  "route": {
+    "tag": "MBUS",
+    "title": "MBUS-M Ocean View Bus",
+    "stop": {
+      "tag": "6501",
+      "title": "Steuart St & Market St"
+    }
+  },
+  "hasPrediction": false
+}
