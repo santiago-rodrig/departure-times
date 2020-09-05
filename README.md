@@ -62,3 +62,12 @@ from your branch to the develop branch of the original repository.
 
 Specify the license. You can [read the license here](./LICENSE.md).
 
+## Contact
+
+You can reach out to me through the following URLs.
+
+- [My website](https://santiagorodriguez.dev)
+- [Github](https://github.com/santiago-rodrig)
+- [LinkedIn](https://www.linkedin.com/in/santiago-andres-rodriguez-marquez/)
+- [AngelList](https://angel.co/u/santiago-andres-rodriguez-marquez)
+- [santo1996.29@gmail.com](mailto:santo1996.29@gmail.com)
