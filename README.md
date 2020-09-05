@@ -19,3 +19,12 @@ this agency is [San Francisco Muni](https://www.sfmta.com/). Actually, all the
 public transport agencies that are in the North of California should be
 handled, that's for a future version of the API.
 
+### Live version and API documentation
+
+The live version of the API has the following base URL.
+
+`https://srodrig-departure-time-api.herokuapp.com/api/v1/`
+
+All the possible endpoints are explained in
+[the documentation](https://documenter.getpostman.com/view/11766934/TVCh1TUJ).
+
