@@ -75,7 +75,7 @@ class NextBusConsumer
       end
     end
 
-    JSON.generate(json_result)
+    json_result
   end
 
   def parse_route_data(response_body)
@@ -126,7 +126,7 @@ class NextBusConsumer
       end
     end
 
-    JSON.generate(json_result)
+    json_result
   end
 
   def parse_routes_response(response_body)
@@ -140,6 +140,6 @@ class NextBusConsumer
       }
     end
 
-    JSON.generate(json_result)
+    json_result
   end
 end
