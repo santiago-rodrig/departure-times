@@ -28,3 +28,24 @@ The live version of the API has the following base URL.
 All the possible endpoints are explained in
 [the documentation](https://documenter.getpostman.com/view/11766934/TVCh1TUJ).
 
+## Setup in local environment
+
+First and foremost, you'll need to have the following.
+
+- [Ruby](https://www.ruby-lang.org/en/) (~> 2.6.6)
+
+Now, clone the repository.
+
+```sh
+git clone https://github.com/santiago-rodrig/departure-time.git
+```
+
+Install the dependencies.
+
+```sh
+bundle install
+```
+
+And you're set, to run the tests use `rake test`, to start the local web server
+use `rake server`.
+
