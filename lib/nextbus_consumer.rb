@@ -33,6 +33,15 @@ class NextBusConsumer
     parse_predictions_data(response.body)
   end
 
+  def predict_stop_departure_time_by_tag(stop_tag, route_tag)
+    response = RestClient.get(
+      BASE_URL,
+      params: {command: 'predictions', a: AGENCY, s: stop_tag, r: route_tag}
+    )
+
+    parse_predictions_data_by_tag(response.body)
+  end
+
   def parse_predictions_data(response_body)
     doc = Nokogiri::XML(response_body)
     json_result = []

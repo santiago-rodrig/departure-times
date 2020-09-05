@@ -20,3 +20,10 @@ get API_VERSION + 'prediction_by_id' do
 
   json CONSUMER.predict_stop_departure_time_by_id(stop_id)
 end
+
+get API_VERSION + 'prediction_by_tag' do
+  route_tag = params[:route_tag]
+  stop_tag = params[:stop_tag]
+
+  json CONSUMER.predict_stop_departure_time_by_tag(stop_tag, route_tag)
+end
