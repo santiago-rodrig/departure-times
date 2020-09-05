@@ -1,3 +1,8 @@
+![release badge](https://img.shields.io/github/v/release/santiago-rodrig/departure-times)
+![license badge](https://img.shields.io/github/license/santiago-rodrig/departure-times)
+![followers](https://img.shields.io/github/followers/santiago-rodrig?style=social)
+![stars](https://img.shields.io/github/stars/santiago-rodrig/departure-times?style=social)
+
 # departure-times
 
 ## Table of contents
