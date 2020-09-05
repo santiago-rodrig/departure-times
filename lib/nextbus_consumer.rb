@@ -30,10 +30,10 @@ class NextBusConsumer
       params: {command: 'predictions', a: AGENCY, stopId: stop_id}
     )
 
-    parse_prediction_data(response.body)
+    parse_predictions_data(response.body)
   end
 
-  def parse_prediction_data(response_body)
+  def parse_predictions_data(response_body)
     doc = Nokogiri::XML(response_body)
     json_result = []
 
