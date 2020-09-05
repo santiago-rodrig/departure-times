@@ -9,18 +9,9 @@ class RootPathTest < Test::Unit::TestCase
     Sinatra::Application
   end
 
-  def test_it_gets_root_route
-    get '/'
+  def test_it_gets_routes_list
+    get '/api/v1/routes'
 
     assert last_response.ok?
-  end
-
-  def test_it_returns_json
-    get '/'
-
-    assert_equal(
-      {"result" => "Is working."},
-      JSON.parse(last_response.body)
-    )
   end
 end
