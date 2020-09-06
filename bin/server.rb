@@ -1,6 +1,11 @@
 require 'sinatra'
 require 'sinatra/json'
+require 'sinatra/cors'
 require './lib/nextbus_consumer'
+
+set :allow_origin, '*'
+set :allow_methods, 'GET'
+set :allow_headers, 'Content-Type,Accept'
 
 CONSUMER = NextBusConsumer.new
 API_VERSION = '/api/v1/'
