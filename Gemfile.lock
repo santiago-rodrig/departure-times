@@ -39,6 +39,7 @@ GEM
       rack-protection (= 2.0.8.1)
       sinatra (= 2.0.8.1)
       tilt (~> 2.0)
+    sinatra-cors (1.2.0)
     tilt (2.0.10)
     unf (0.1.4)
       unf_ext
@@ -53,6 +54,7 @@ DEPENDENCIES
   rest-client
   sinatra
   sinatra-contrib
+  sinatra-cors
 
 BUNDLED WITH
    2.1.4
