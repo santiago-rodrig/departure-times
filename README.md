@@ -38,6 +38,7 @@ All the possible endpoints are explained in
 First and foremost, you'll need to have the following.
 
 - [Ruby](https://www.ruby-lang.org/en/) (~> 2.6.6)
+- [Bunlder](https://bundler.io/v2.1/#getting-started) (2.1.4)
 
 Now, clone the repository.
 
